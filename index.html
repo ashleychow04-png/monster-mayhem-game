@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>MONSTER MAYHEM | Golden Treasure Hunt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+    <div class="golden-frame">
+        <div class="game-content">
+            <div class="game-header">
+                <div class="game-title">👾 MONSTER MAYHEM</div>
+                <div class="game-subtitle">✦ THE GOLDEN TREASURE HUNT ✦</div>
+            </div>
+
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <div class="stat-label">💎 TREASURE</div>
+                    <div class="stat-value" id="treasureStatus">???</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">⚡ MOVES LEFT</div>
+                    <div class="stat-value" id="movesLeft">20</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">🗺️ EXPLORED</div>
+                    <div class="stat-value" id="exploredCount">0</div>
+                </div>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="hexCanvas" width="900" height="700"></canvas>
+            </div>
+
+            <div class="status-area">
+                <div class="status-message" id="gameStatus">⚔️ READY FOR BATTLE</div>
+                <div class="status-detail" id="statusDetail">Click green hexes to move monster</div>
+                <div class="hot-cold" id="hotColdHint">🌸 DISTANCE: ?</div>
+            </div>
+
+            <div class="button-panel">
+                <button class="btn-gold" id="infoBtn">📜 GAME RULES</button>
+                <button class="btn-gold btn-dark" id="deselectBtn">★ DESELECT</button>
+                <button class="btn-gold btn-dark" id="resetBtn">🔄 RESET GAME</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL FOR RULES -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            👑 GOLDEN RULES 👑
+        </div>
+        <div class="modal-body">
+            <ul class="rules-list">
+                <li>🎯 <strong>FIND THE HIDDEN TREASURE</strong> - One golden chest is hidden somewhere on the map!</li>
+                <li>⚡ <strong>LIMITED MOVES: 20</strong> - Each move costs 1 move. Plan your path wisely!</li>
+                <li>🔥 <strong>HOT & COLD SYSTEM</strong> - Status message tells how close you are to treasure!</li>
+                <li>🟢 <strong>MOVE RANGE: 2 STEPS</strong> - Monster can jump up to 2 hexes away.</li>
+                <li>💀 <strong>GAME OVER</strong> - If moves reach 0 without treasure, you LOSE!</li>
+                <li>🏆 <strong>VICTORY</strong> - Land on treasure hex to win the game!</li>
+                <li>🗺️ <strong>EXPLORATION</strong> - Each new hex visited counts toward exploration.</li>
+                <li>✨ <strong>GOLDEN THEME</strong> - Premium high-class monster hunting experience.</li>
+            </ul>
+            <div class="rules-footer">
+                "Fortune favors the bold monster hunter..."
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-gold modal-close-btn">I UNDERSTAND</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
